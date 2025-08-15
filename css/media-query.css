@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+main{
+   width: 100vw;
+    height: 100vh;
+   background-color: rgb(60, 76, 71);
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+h1{
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+p{
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px 0;
+    max-width: 600px;
+}
+img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    animation: SCC 5s ease-in-out ;
+    display: block;
+}
+img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 12px rgba(161, 152, 152, 0.3));
+}
+
+@keyframes SCC {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* mobile first, we start form the smallest viewport width */
+@media (min-width: 320px) and (max-width: 768px) {
+    main{
+        background-color: rgb(60, 76, 71);
+    }
+    h1 {
+        font-size: 1.5em;
+        color: darkkhaki;
+    }
+    p {
+        font-size: 1em;
+        padding: 0 20px;
+        display: none;
+    }
+    img {
+        width: 90%;
+        max-width: 100%;
+        /* display: none; * Hide image on small screens */
+        animation: SCC 5s ease-in-out;
+    }
+    
+}
+/* min-width 768px */
+@media (min-width: 768px)  {
+    main {
+        background-color: rgb(218, 147, 77);
+    }
+    h1 {
+        font-size: 2em;
+        color:black;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.2em;
+        padding: 0 40px;
+        display: none;
+    }
+    img {
+        width: 80%;
+        max-width: 600px;
+        animation: SCC 5s ease-in-out;
+    }
+}
+@media (min-width:1024px) {
+    main {
+        background-color: rgb(97, 72, 47);
+    }
+    h1 {
+        font-size: 2.5em;
+        color: darkblue;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.2em;
+        padding: 0 40px;
+        display: none;
+    }
+    img {
+        width: 80%;
+        max-width: 600px;
+        animation: SCC 5s ease-in-out;
+    }
+}
